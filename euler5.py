@@ -34,5 +34,6 @@ def smallest_num_evenly_divisible_by_all(divisors):
 
 #Check the largest values first, don't check values under 20 that evenly divide
 # into a value we've already checked (1-10).
-to_check = [20, 19, 18, 17, 16, 15, 14, 13, 12, 11]
-print(str(smallest_num_evenly_divisible_by_all(to_check)))
+
+            # to_check = [20, 19, 18, 17, 16, 15, 14, 13, 12, 11]
+            # print(str(smallest_num_evenly_divisible_by_all(to_check)))
