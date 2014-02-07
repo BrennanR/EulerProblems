@@ -4,7 +4,7 @@ import euler7
 import time
 
 
-def find_sum_of_primes(ceiling):
+def find_sum_of_primes_to(ceiling):
     sum_of_primes = 0
     for i in range(ceiling):
         if euler7.is_prime(i):
@@ -14,6 +14,6 @@ def find_sum_of_primes(ceiling):
 
 
 start_time = time.time()
-print(str(find_sum_of_primes(2000000)))
+print(str(find_sum_of_primes_to(2000000)))
 end_time = time.time()
 print("Run time: {0} seconds.".format(str(end_time - start_time)))
