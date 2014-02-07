@@ -33,4 +33,4 @@ def get_nth_prime(n):
             return x
 
 
-print(get_nth_prime(10001))
+            # print(get_nth_prime(10001))
