@@ -1,21 +1,26 @@
 __author__ = 'Brennan'
 
-import math
 import itertools
+import math
+import time
 
 
-def is_pythagorean_triplet(a, b, c):
-    return math.pow(a, 2) + math.pow(b, 2) == math.pow(c, 2)
+def is__pythagorean_triplet(a, b, c):
+    return a * a + b * b == c * c
 
 
 def find_triplet_that_sums_to(triple_sum):
-    for triple in itertools.ifilter(lambda x: x[0] < x[1] < x[2], itertools.permutations(range(triple_sum), 3)):
+    all_triples = itertools.permutations(range(triple_sum), 3)
+    all_ordered_triples = itertools.ifilter(lambda x: x[0] < x[1] < x[2], all_triples)
 
-        # print("triple 0: " + str(triple[0]) + ", triple 1: " + str(triple[1]) + ", triple 2: " + str(triple[2]))
-
-        if is_pythagorean_triplet(triple[0], triple[1], triple[2]):
+    for triple in all_ordered_triples:
+        if is__pythagorean_triplet(triple[0], triple[1], triple[2]):
             if triple[0] + triple[1] + triple[2] == triple_sum:
-                return triple[0] * triple[1] * triple[2]
+                return math.sqrt(triple[0]) * math.sqrt(triple[1]) * math.sqrt(triple[2])
 
 
-print(find_triplet_that_sums_to(1000))
+time1 = time.time()
+print find_triplet_that_sums_to(1000)
+time2 = time.time()
+print("Time 2: " + str(time2))
+print("Run time: " + str(time2 - time1))
