@@ -38,9 +38,10 @@ def get_problem_set_as_list_of_lists():
 
 
 def find_greatest_product():
-    """ To solve the problem we're going to check each of four possible products for each data point. If there's no legal
-     way to calculate the product (some indexes are out of bounds) we'll ignore it for that point. These four possibilities
-     are (where P is our current point and the three X's are the other three values we'll use):
+    """ To solve the problem we're going to check each of four possible products for each data point (note that any more
+     permutations than this would be redundant). If there's no legal way to calculate the product (some indexes are out
+     of bounds) we'll ignore it for that point. These four possibilities are (where P is our current point and the
+     three X's are the other three values we'll use):
         P,O,O,O    O,O,O,X    P,X,X,X    P,O,O,O
         O,X,O,O    O,O,X,O    O,O,O,O    X,O,O,O
         O,O,X,O    O,X,O,O    O,O,O,O    X,O,O,O
