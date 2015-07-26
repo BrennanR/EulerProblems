@@ -1,4 +1,4 @@
-from __future__ import division
+
 import itertools
 
 
@@ -22,10 +22,8 @@ def smallest_num_evenly_divisible_by_all(divisors):
         divisible_by_all = False
         for divisor in divisors:
             if is_evenly_divisible(divisor, i):
-                #print(str(i) + " / " + str(divisor) + ", evenly.")
                 divisible_by_all = True
             else:
-                #print(str(i) + " / " + str(divisor) + ", not evenly.")
                 divisible_by_all = False
                 break
 
